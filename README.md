@@ -1,4 +1,4 @@
-# Pokédex
+# Pokedex Application
 
 - React with Redux
 - Redux saga for overview page API call's
