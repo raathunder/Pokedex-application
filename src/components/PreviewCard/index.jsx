@@ -5,7 +5,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-
+import Grid from "@material-ui/core/Grid";
 import {
   Link
 } from 'react-router-dom';
@@ -18,8 +18,9 @@ const useStyles = makeStyles({
     margin: '.5rem'
   },
   media: {
-    height: 140,
-    backgroundSize: 'contain'
+    height: 10,
+    backgroundSize: 'contain',
+    
   },
 });
 
@@ -30,14 +31,19 @@ export default function PreviewCard({ pokemon }) {
   const sprite = pokemon.sprites ? getSprite(pokemon.sprites) : '';
 
   return (
-    <Link to={`/pokemon/${id}`}>
-      <Card className={classes.root}>
+     <Link to={`/pokemon/${id}`}>
+      <Card className={classes.root} >
         <CardActionArea>
           <CardMedia
             className={classes.media}
             image={sprite}
           />
-          <CardContent>
+                <CardContent>
+            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`}
+            alt={name}
+            style={{width:100,height:100, paddingBottom:40,textAlign:'center',
+            marginLeft:10,padding:12}}/>
+
             <Typography gutterBottom variant="h5" component="h2">
               {name}
             </Typography>
@@ -45,7 +51,8 @@ export default function PreviewCard({ pokemon }) {
           </CardContent>
         </CardActionArea>
       </Card>
-    </Link>
+    </Link> 
+         
   );
 };
 

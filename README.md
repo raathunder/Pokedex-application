@@ -1,8 +1,6 @@
-# Pokédex
+# Pokedex
 
-Live: https://master.d1or1a1srkom3l.amplifyapp.com/
-
-Pokédex made with:
+Pokedex made with:
 
 - React with Redux
 - Redux saga for overview page API call's

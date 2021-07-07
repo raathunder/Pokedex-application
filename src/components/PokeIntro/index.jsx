@@ -70,7 +70,12 @@ function Intro({ types, sprite, name, description, fetchDescription }) {
                 </Link>
               </Grid>
               <Grid item xs={4}>
-                <img alt={sprite} src={sprite} className={classes.sprite} />
+              <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${params.pokemonId}.svg` }
+            alt={name}
+            className={classes.sprite}
+           
+            />
+                {/* <img alt={sprite} src={sprite} className={classes.sprite} /> */}
               </Grid>
               <Grid item xs={4} className={classes.iconContainer}>
                 <Link to={`/pokemon/${next}`}>

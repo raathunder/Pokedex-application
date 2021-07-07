@@ -12,8 +12,10 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
-import TabletMacIcon from '@material-ui/icons/TabletMac';
 import SearchIcon from '@material-ui/icons/Search';
+import MenuIcon from "@material-ui/icons/Menu";
+
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -38,6 +40,7 @@ const useStyles = makeStyles(theme => ({
     },
     marginLeft: '4rem',
     width: '70vw',
+    
   },
   searchIcon: {
     width: theme.spacing(7),
@@ -55,11 +58,12 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(1, 1, 1, 7),
     transition: theme.transitions.create('width'),
     '&:disabled': {
-      color: 'white',
+      color: 'blue',
     }
   },
   btn: {
-    marginLeft: '3rem'
+    marginLeft: '3rem',
+    marginTop:'2rem',
   },
   try: {
     marginLeft: '3rem',
@@ -80,19 +84,8 @@ function Navbar({ pokemons, setFilter, filter, page }) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <TabletMacIcon />
-          </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
-            <Link to="/">Pokedex</Link>
-          </Typography>
+      
+     
           {page !== "pokemon"
           ?
             <div className={classes.search}>
@@ -113,12 +106,11 @@ function Navbar({ pokemons, setFilter, filter, page }) {
             </div>
           : <>
               <Link to="/">
-                <Button variant="contained" className={classes.btn}>BACK</Button>
+                <Button variant="contained" className={classes.btn}>Go BACK</Button>
               </Link>
-              <Typography variant="h6" className={classes.try}>Find  pokemons</Typography>
+              {/* <Typography variant="h6" className={classes.try}>Find  pokemons</Typography> */}
             </> }
-        </Toolbar>
-      </AppBar>
+        
     </div>
   );
 };

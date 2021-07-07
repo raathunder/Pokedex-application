@@ -42,7 +42,7 @@ function List({ fetchAll, resetData, pokemons, loading, timer, filter, error }) 
         <>
             <Container maxWidth="lg">
                 <Paper className={classes.options}>
-                    <Button variant="outlined" onClick={fetchAll}>Catch Pokemons</Button>
+                    <Button variant="outlined" onClick={fetchAll}>Get Pokemons</Button>
                     <Button variant="outlined" onClick={resetData}>Reset</Button>
                     <Typography>{
                         error
@@ -54,7 +54,7 @@ function List({ fetchAll, resetData, pokemons, loading, timer, filter, error }) 
             <Container maxWidth="lg" className={classes.container}>
                 {loading 
                 ? <>
-                    <img alt={pokeball} className={classes.pokeball} src={pokeball}></img>
+                    <img alt={pokeball} className={classes.pokeball}   src={pokeball}></img>
                     <Typography>Catching...</Typography>
                   </>
                 : ''}

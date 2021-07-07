@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
         marginBottom: '1rem'
     },
     progressHolder: {
-      width: '150px',
+      width: "150px",
       position: 'relative',
       display: 'flex',
       justifyContent: 'center',
