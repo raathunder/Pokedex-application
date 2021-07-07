@@ -2,6 +2,8 @@
 
 Pokedex made with:
 
+# Pokedex Application
+
 - React with Redux
 - Redux saga for overview page API call's
 - Redux thunk for detail page API call's
