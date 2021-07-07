@@ -8,7 +8,7 @@ import HeaderBar from "./HeaderBar/HeaderBar";
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = { open: true };
+    this.state = { open: false };
   }
 
   handleDrawerOpen = () => {
